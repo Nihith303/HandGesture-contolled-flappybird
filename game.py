@@ -54,7 +54,8 @@ game_data = read_json()
 current_date = datetime.now().strftime("%Y-%m-%d")
 check_date_exist(game_data=game_data)
 start_time = time.time()
-
+# Created by Jonnalagadda Nihit
+# Created on 19-August-2024
 
 while running:
     elapsed_time = time.time() - start_time
