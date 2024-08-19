@@ -1,0 +1,4 @@
+# pygame    - 2.6.0
+# cv2       - 4.10.0
+# mediapipe - 0.10.14
+# random, time , datetime, json
