@@ -131,7 +131,7 @@ while running:
     if cv2.waitKey(1) & 0xFF == ord('q'):
          running = False
 
-
+update_high_score(game_data, score)
 update_time(game_data, elapsed_time)
 cap.release()
 pygame.quit()
