@@ -13,14 +13,18 @@ def cal_total_time_played(game_data, start_time):
     elapsed_time = time.time() - start_time
     return game_data[current_date]["time_played"] + elapsed_time
 
-
-def save_game_data(game_data, score, elapsed_time):
-    current_date = get_current_day()
-    game_data[current_date]["time_played"] += elapsed_time
+def update_high_score(game_data, score):
     if score > game_data['Over_all_highest']:
         game_data['Over_all_highest'] = score
-    if score > game_data[current_date]["high_score"]:
-        game_data[current_date]["high_score"] = score
+    if score > game_data[get_current_day()]["high_score"]:
+        game_data[get_current_day()]["high_score"] = score
+    with open(data_file, "w") as file:
+            json.dump(game_data, file, indent=4)
+
+
+def update_time(game_data, elapsed_time):
+    current_date = get_current_day()
+    game_data[current_date]["time_played"] += elapsed_time
     with open(data_file, "w") as file:
             json.dump(game_data, file, indent=4)
 
