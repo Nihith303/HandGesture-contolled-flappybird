@@ -8,4 +8,8 @@ Controlles:
   At any point of time if u want to exit the game u can press escape button.
   when u die in game and have some time left to play U can once open and close fist to play again.
 
-TRY the Game in Laptop using 👉🏻(website-version)[https://nihith303.github.io/rehab-wings-website-version/]
+# Rehab Wings – Website Version  
+
+- 👉 **Play the Game:** [https://nihith303.github.io/rehab-wings-website-version/](https://nihith303.github.io/rehab-wings-website-version/)  
+- 💻 **GitHub Repo:** [https://github.com/nihith303/rehab-wings-website-version](https://github.com/nihith303/rehab-wings-website-version)  
+
