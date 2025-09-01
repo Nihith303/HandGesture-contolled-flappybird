@@ -7,3 +7,5 @@ Controlles:
   By closing the fist flappy bird will fly up.
   At any point of time if u want to exit the game u can press escape button.
   when u die in game and have some time left to play U can once open and close fist to play again.
+
+TRY the Game in Laptop using 👉🏻(website-version)[https://nihith303.github.io/rehab-wings-website-version/]
