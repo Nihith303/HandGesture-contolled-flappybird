@@ -2,13 +2,18 @@ import mysql.connector
 from mysql.connector import Error
 from datetime import datetime
 import time
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 class GameDatabase:
-    def __init__(self, host="localhost", database="rehab_wings", user="root", password="Nihith&*3003"):
-        self.host = host
-        self.database = database
-        self.user = user
-        self.password = password
+    def __init__(self, host=None, database=None, user=None, password=None, port=None):
+        self.host = host or os.getenv('DB_HOST', 'localhost')
+        self.database = database or os.getenv('DB_NAME', 'rehab_wings')
+        self.user = user or os.getenv('DB_USER', 'root')
+        self.password = password or os.getenv('DB_PASSWORD', 'Nihith&*3003')
+        self.port = port or int(os.getenv('DB_PORT', 3306))
         self.connection = None
         self.cursor = None
         self.connect()
@@ -20,7 +25,8 @@ class GameDatabase:
                 host=self.host,
                 database=self.database,
                 user=self.user,
-                password=self.password
+                password=self.password,
+                port=self.port
             )
             if self.connection.is_connected():
                 self.cursor = self.connection.cursor()
