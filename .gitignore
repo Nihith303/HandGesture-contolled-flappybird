@@ -1,3 +1,5 @@
 .wings
 __pycache__
 .env
+build
+dist
